@@ -42,4 +42,10 @@ public class NewProductsSteps {
         newProductsPage.verifyBabyJerseyImage();
         logger.info("Baby Jersey Image is present");
     }
+
+    @Then("Verifies that Unisex V-Neck Tee image is present")
+    public void verifiesThatUnisexVNeckTeeImageIsPresent() {
+        newProductsPage.verifyUnisexVNeckTeeImage();
+        logger.info("Unisex V-NeckTee image is present");
+    }
 }

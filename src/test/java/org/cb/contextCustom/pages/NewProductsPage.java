@@ -25,6 +25,9 @@ public class NewProductsPage extends Base {
     @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
     public WebElement babyJerseyImage;
 
+    @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
+    public WebElement unisexVNeckTeeImage;
+
 
 //    String actual;
 //    public void verifyTheFields(String value) {
@@ -53,5 +56,7 @@ public class NewProductsPage extends Base {
         babyJerseyImage.isDisplayed();
     }
 
-
+    public void verifyUnisexVNeckTeeImage() {
+        unisexVNeckTeeImage.isDisplayed();
+    }
 }
