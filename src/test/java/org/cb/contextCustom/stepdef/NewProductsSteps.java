@@ -18,10 +18,23 @@ public class NewProductsSteps {
         logger.info("User is on LandingPage");
     }
 
-    @Then("Verifies that Embroidered Apron picture is present")
-    public void verifiesThatEmbroideredApronPictureIsPresent() {
-        newProductsPage.verifyEmbroideredApronImage();
-        logger.info("Apron image is present");
-
+    @Then("Verifies that {string} is present")
+    public void verifiesThatIsPresent(String value) {
+        newProductsPage.verifyTheFields(value);
     }
+
+//    @Then("Verifies that Embroidered Apron image is present")
+//    public void verifiesThatEmbroideredApronImageIsPresent() {
+//        newProductsPage.verifyEmbroideredApronImage();
+//        logger.info("Apron image is present");
+//
+//    }
+//
+//    @Then("Verifies that UnisexSpongeFleece image is present")
+//    public void verifiesThatUnisexSpongeFleeceImageIsPresent() {
+//        newProductsPage.verifyUnisexSpongeFleeceImage();
+//        logger.info("Unisex Sponge Fleece Image is present");
+//    }
+
+
 }
