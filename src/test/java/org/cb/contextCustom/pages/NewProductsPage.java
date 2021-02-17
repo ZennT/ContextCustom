@@ -37,6 +37,9 @@ public class NewProductsPage extends Base {
     @FindBy(xpath = "//a[normalize-space()='More products']")
     public WebElement moreProductsButton;
 
+    @FindBy(xpath = "//div[@class='row pt-4 mx-n2']//div[1]//div[1]//div[2]//input[1]")
+    public WebElement designAndBuyButton;
+
 
 
 
@@ -75,10 +78,16 @@ public class NewProductsPage extends Base {
         action.moveToElement(apron).click().perform();
     }
 
+    public void clickOnDesignAndBuy() {
+        designAndBuyButton.click();
 
-    public void clickOnMoreProductsButton() {
-        moreProductsButton.click();
     }
+
+//    public void clickOnMoreProductsButton() {
+//        moreProductsButton.click();
+//    }
+
+
 }
 
 

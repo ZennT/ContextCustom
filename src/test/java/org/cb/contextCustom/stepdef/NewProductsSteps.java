@@ -1,5 +1,6 @@
 package org.cb.contextCustom.stepdef;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.cb.contextCustom.pages.NewProductsPage;
@@ -56,12 +57,19 @@ public class NewProductsSteps {
         logger.info("Moves to Apron");
     }
 
-
-    @Then("Clicks on More Products button")
-    public void clicksOnMoreProductsButton() {
-        newProductsPage.clickOnMoreProductsButton();
-        logger.info("Clicks on More Products Button");
+    @And("Clicks on Design and Buy")
+    public void clicksOnDesignAndBuy() {
+        newProductsPage.clickOnDesignAndBuy();
+        logger.info("Clicks on Design and Buy");
     }
+
+
+//    @Then("Clicks on More Products button")
+//    public void clicksOnMoreProductsButton() {
+//        newProductsPage.clickOnMoreProductsButton();
+//        logger.info("Clicks on More Products Button");
+//    }
+
 
 
 }
