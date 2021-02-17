@@ -48,4 +48,10 @@ public class NewProductsSteps {
         newProductsPage.verifyUnisexVNeckTeeImage();
         logger.info("Unisex V-NeckTee image is present");
     }
+
+    @Then("Clicks on More Products button")
+    public void clicksOnMoreProductsButton() {
+        newProductsPage.clickOnMoreProductsButton();
+        logger.info("Clicks on More Products Button");
+    }
 }
