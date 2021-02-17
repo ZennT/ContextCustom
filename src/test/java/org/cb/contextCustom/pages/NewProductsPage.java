@@ -4,6 +4,8 @@ import org.cb.contextCustom.stepdef.Base;
 import org.cb.contextCustom.utils.MyDriver;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
@@ -11,6 +13,7 @@ import org.slf4j.LoggerFactory;
 
 public class NewProductsPage extends Base {
     Logger logger = LoggerFactory.getLogger(NewProductsPage.class);
+    Actions action = new Actions(MyDriver.get());
 
 //    public NewProductsPage() {
 //        PageFactory.initElements(MyDriver.get(), this);
@@ -28,8 +31,13 @@ public class NewProductsPage extends Base {
     @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
     public WebElement unisexVNeckTeeImage;
 
+    @FindBy(xpath = "//a[normalize-space()='Context']")
+    public WebElement apron;
+
     @FindBy(xpath = "//a[normalize-space()='More products']")
     public WebElement moreProductsButton;
+
+
 
 
 //    String actual;
@@ -47,15 +55,15 @@ public class NewProductsPage extends Base {
 //    }
 
 
-    public void verifyEmbroideredApronImage(){
+    public void verifyEmbroideredApronImage() {
         embroideredApronImage.isDisplayed();
     }
 
-    public void verifyUnisexSpongeFleeceImage(){
+    public void verifyUnisexSpongeFleeceImage() {
         unisexSpongeFleeceImage.isDisplayed();
     }
 
-    public void verifyBabyJerseyImage(){
+    public void verifyBabyJerseyImage() {
         babyJerseyImage.isDisplayed();
     }
 
@@ -63,7 +71,14 @@ public class NewProductsPage extends Base {
         unisexVNeckTeeImage.isDisplayed();
     }
 
+    public void moveToApron() {
+        action.moveToElement(apron).click().perform();
+    }
+
+
     public void clickOnMoreProductsButton() {
         moreProductsButton.click();
     }
 }
+
+

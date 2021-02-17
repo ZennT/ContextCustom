@@ -49,9 +49,19 @@ public class NewProductsSteps {
         logger.info("Unisex V-NeckTee image is present");
     }
 
+
+    @Then("Moves to apron part")
+    public void movesToApronPart() {
+        newProductsPage.moveToApron();
+        logger.info("Moves to Apron");
+    }
+
+
     @Then("Clicks on More Products button")
     public void clicksOnMoreProductsButton() {
         newProductsPage.clickOnMoreProductsButton();
         logger.info("Clicks on More Products Button");
     }
+
+
 }

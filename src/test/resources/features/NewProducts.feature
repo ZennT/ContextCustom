@@ -7,5 +7,7 @@ Feature: Verifying new products
     Then Verifies that UnisexSpongeFleece image is present
     Then Verifies that Baby Jersey image is present
     Then Verifies that Unisex V-Neck Tee image is present
+    Then Moves to apron part
     Then Clicks on More Products button
+
 
