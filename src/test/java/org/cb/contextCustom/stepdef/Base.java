@@ -16,7 +16,7 @@ public class Base {
     public Base() {
         PageFactory.initElements(MyDriver.get(), this);
     }
-    Logger logger = LoggerFactory.getLogger(WomensClothingSteps.class);
+    Logger logger = LoggerFactory.getLogger(Base.class);
 
 
     public static void waitSomeTime(Long milliSeconds){

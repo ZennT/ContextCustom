@@ -13,6 +13,7 @@ public class NewProductsSteps {
     Logger logger = LoggerFactory.getLogger(NewProductsSteps.class);
     NewProductsPage newProductsPage = new NewProductsPage();
 
+
     @Given("User is on landing page")
     public void userIsOnLandingPage() {
         MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));

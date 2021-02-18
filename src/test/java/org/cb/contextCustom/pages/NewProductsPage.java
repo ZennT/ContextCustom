@@ -12,8 +12,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NewProductsPage extends Base {
+    NewProductsPage newProductsPage = new NewProductsPage();
+
     Logger logger = LoggerFactory.getLogger(NewProductsPage.class);
-    Actions action = new Actions(MyDriver.get());
+    //Actions action = new Actions(MyDriver.get());
 
 //    public NewProductsPage() {
 //        PageFactory.initElements(MyDriver.get(), this);
@@ -75,7 +77,9 @@ public class NewProductsPage extends Base {
     }
 
     public void moveToApron() {
-        action.moveToElement(apron).click().perform();
+        //action.moveToElement(apron).click().perform();
+        moveAndClickToElement(newProductsPage.apron);
+
     }
 
     public void clickOnDesignAndBuy() {
