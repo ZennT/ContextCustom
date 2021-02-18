@@ -4,21 +4,23 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.cb.contextCustom.pages.NewProductsPage;
+import org.cb.contextCustom.pages.NewProducts_if;
 import org.cb.contextCustom.utils.ConfigurationReader;
 import org.cb.contextCustom.utils.MyDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NewProductsSteps {
-    Logger logger = LoggerFactory.getLogger(NewProductsSteps.class);
+
     NewProductsPage newProductsPage = new NewProductsPage();
+    Logger logger = LoggerFactory.getLogger(NewProductsPage.class);
 
 
-    @Given("User is on landing page")
-    public void userIsOnLandingPage() {
-        MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));
-        logger.info("User is on LandingPage");
-    }
+//    @Given("User is on landing page")
+//    public void userIsOnLandingPage() {
+//        MyDriver.get().get(ConfigurationReader.getProperty("baseUrl"));
+//        logger.info("User is on LandingPage");
+//    }
 
 //    @Then("Verifies that {string} is present")
 //    public void verifiesThatIsPresent(String value) {
