@@ -28,6 +28,15 @@ public class NewProductsSteps_if extends Base {
         if(value.equals(newProducts_if.embroideredApronImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.embroideredApronImage);
         }
+        else if(value.equals(newProducts_if.unisexSpongeFleeceImage.getAttribute("alt"))){
+            imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceImage);
+        }
+        else if(value.equals(newProducts_if.babyJerseyImage.getAttribute("alt"))){
+            imageIsDisplayedAndEnabled(newProducts_if.babyJerseyImage);
+        }
+        else if(value.equals(newProducts_if.unisexVNeckTeeImage.getAttribute("alt"))){
+            imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeImage);
+        }
 
         else logger.warn("Error");
     }

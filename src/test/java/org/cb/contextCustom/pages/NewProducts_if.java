@@ -22,7 +22,7 @@ public class NewProducts_if  {
     @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
     public WebElement babyJerseyImage;
 
-    @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
+    @FindBy(xpath = "//img[@alt='Unisex V-Neck Tee | Bella + Canvas 3005']")
     public WebElement unisexVNeckTeeImage;
 
 
