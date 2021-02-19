@@ -25,5 +25,17 @@ public class NewProducts_if  {
     @FindBy(xpath = "//img[@alt='Unisex V-Neck Tee | Bella + Canvas 3005']")
     public WebElement unisexVNeckTeeImage;
 
+    @FindBy(xpath = "//a[normalize-space()='Embroidered Apron']")
+    public WebElement embroideredApronName;
+
+    @FindBy(xpath = "//a[contains(text(),'Unisex Sponge Fleece Drop Shoulder Sweatshirt')]")
+    public WebElement unisexSpongeFleeceName;
+
+    @FindBy(xpath = "//a[contains(text(),'Baby Jersey Short Sleeve One Piece |')]")
+    public WebElement babyJerseyName;
+
+    @FindBy(xpath = "//a[normalize-space()='Unisex V-Neck Tee | Bella + Canvas 3005']")
+    public WebElement unisexVNeckTeeName;
+
 
 }

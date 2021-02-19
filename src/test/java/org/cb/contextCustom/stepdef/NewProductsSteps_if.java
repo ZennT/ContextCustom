@@ -42,7 +42,21 @@ public class NewProductsSteps_if extends Base {
     }
 
     @Then("Verifies that {string} item name is present")
-    public void verifiesThatItemNameIsPresent(String arg0) {
+    public void verifiesThatItemNameIsPresent(String value) {
+
+        if(value.equals(newProducts_if.embroideredApronName.getText())){
+            textIsDisplayedAndEnabled("Embroidered Apron",newProducts_if.embroideredApronName);
+        }
+        else if(value.equals(newProducts_if.unisexSpongeFleeceName.getText())){
+            textIsDisplayedAndEnabled("Unisex Sponge Fleece Drop Shoulder Sweatshirt | 3945 Bella Canvas", newProducts_if.unisexSpongeFleeceName);
+        }
+        else if(value.equals(newProducts_if.babyJerseyName.getText())){
+            textIsDisplayedAndEnabled("Baby Jersey Short Sleeve One Piece | 100B Bella Canvas",newProducts_if.babyJerseyName);
+        }
+        else if(value.equals(newProducts_if.unisexVNeckTeeName.getText())){
+            textIsDisplayedAndEnabled("Unisex V-Neck Tee | Bella + Canvas 3005",newProducts_if.unisexVNeckTeeName);
+        }
+        else logger.warn("Error");
     }
 
 

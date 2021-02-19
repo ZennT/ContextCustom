@@ -60,11 +60,11 @@ public class NewProductsSteps {
         logger.info("Moves to Apron");
     }
 
-    @And("Clicks on Design and Buy")
-    public void clicksOnDesignAndBuy() {
-        newProductsPage.clickOnDesignAndBuy();
-        logger.info("Clicks on Design and Buy");
-    }
+//    @And("Clicks on Design and Buy")
+//    public void clicksOnDesignAndBuy() {
+//        newProductsPage.clickOnDesignAndBuy();
+//        logger.info("Clicks on Design and Buy");
+//    }
 
 
 //    @Then("Clicks on More Products button")
