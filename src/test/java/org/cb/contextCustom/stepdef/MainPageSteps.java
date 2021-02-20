@@ -29,11 +29,5 @@ public class MainPageSteps extends Base{
         logger.info("ContextCustom logo is displayed.");
     }
 
-    @Then("Verify that {string} is present")
-    public void verifyThatIsPresent(String arg0) {
-    }
 
-    @Then("Verify that Gildan and Bella+CANVAS logo is present")
-    public void verifyThatGildanAndBellaCANVASLogoIsPresent() {
-    }
 }
