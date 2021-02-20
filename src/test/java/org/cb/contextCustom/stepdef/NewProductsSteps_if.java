@@ -80,8 +80,21 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
-    @Then("Verifies that {string} Stars is present")
-    public void verifiesThatStarsIsPresent(String value) {
+    @Then("Verifies that {string} brand is present")
+    public void verifiesThatBrandIsPresent(String value) {
+        if(value.equals(newProducts_if.embroideredApronBrand.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronBrand);
+        }
+        else if(value.equals(newProducts_if.unisexSpongeFleeceBrand.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexSpongeFleeceBrand);
+        }
+        else if(value.equals(newProducts_if.babyJerseyBrand.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.babyJerseyBrand);
+        }
+        else if(value.equals(newProducts_if.unisexVNeckTeeBrand.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexVNeckTeeBrand);
+        }
+        else logger.warn("Error");
     }
 
     @And("Clicks on More Products button")
@@ -91,7 +104,6 @@ public class NewProductsSteps_if extends Base {
         newProducts_if.productCatalog.isDisplayed();
         logger.info("Product Catalog is present");
     }
-
 
 }
 

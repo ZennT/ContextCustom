@@ -18,6 +18,11 @@ Feature: Verifying new products
     Then Verifies that "$18.73" is present
     Then Verifies that "$9.95" is present
     Then Verifies that "$14.99" is present
+    
+    Then Verifies that "Context" brand is present
+    Then Verifies that "Bella canvas" brand is present
+    Then Verifies that "Bella canvas" brand is present
+    Then Verifies that "Bella canvas" brand is present
 
     And Clicks on More Products button
 

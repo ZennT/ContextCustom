@@ -49,6 +49,18 @@ public class NewProducts_if  {
     @FindBy(xpath = "//span[contains(text(),'$14.99')]")
     public WebElement unisexVNeckTeePrice;
 
+    @FindBy(xpath = "(//a[@class='product-meta d-block font-size-xs pb-1'])[1]")
+    public WebElement embroideredApronBrand;
+
+    @FindBy(xpath = "(//a[@class='product-meta d-block font-size-xs pb-1'])[2]")
+    public WebElement unisexSpongeFleeceBrand;
+
+    @FindBy(xpath = "(//a[@class='product-meta d-block font-size-xs pb-1'])[3]")
+    public WebElement babyJerseyBrand;
+
+    @FindBy(xpath = "(//a[@class='product-meta d-block font-size-xs pb-1'])[4]")
+    public WebElement unisexVNeckTeeBrand;
+
     @FindBy(xpath = "//a[normalize-space()='More products']")
     public WebElement moreProductsButton;
 
