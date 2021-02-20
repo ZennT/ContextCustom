@@ -31,17 +31,29 @@ public class NewProducts_if  {
     @FindBy(xpath = "//a[contains(text(),'Unisex Sponge Fleece Drop Shoulder Sweatshirt')]")
     public WebElement unisexSpongeFleeceName;
 
-    @FindBy(xpath = "//a[contains(text(),'Baby Jersey Short Sleeve One Piece |')]")
+    @FindBy(xpath = "(//h3[@class='product-title font-size-sm'])[3]")
     public WebElement babyJerseyName;
 
     @FindBy(xpath = "//a[normalize-space()='Unisex V-Neck Tee | Bella + Canvas 3005']")
     public WebElement unisexVNeckTeeName;
 
+    @FindBy(xpath = "//span[contains(text(),'$16.50')]")
+    public WebElement embroideredApronPrice;
 
+    @FindBy(xpath = "//span[contains(text(),'$18.73')]")
+    public WebElement unisexSpongeFleecePrice;
 
+    @FindBy(xpath = "//span[contains(text(),'$9.95')]")
+    public WebElement babyJerseyPrice;
+
+    @FindBy(xpath = "//span[contains(text(),'$14.99')]")
+    public WebElement unisexVNeckTeePrice;
 
     @FindBy(xpath = "//a[normalize-space()='More products']")
     public WebElement moreProductsButton;
+
+    @FindBy(xpath="//li[@class='breadcrumb-item text-nowrap active']//a[normalize-space()='Product Catalog']")
+    public WebElement productCatalog;
 
 
 

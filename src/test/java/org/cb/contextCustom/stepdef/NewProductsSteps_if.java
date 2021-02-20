@@ -1,5 +1,6 @@
 package org.cb.contextCustom.stepdef;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.cb.contextCustom.pages.NewProducts_if;
@@ -45,16 +46,18 @@ public class NewProductsSteps_if extends Base {
     public void verifiesThatItemNameIsPresent(String value) {
 
         if(value.equals(newProducts_if.embroideredApronName.getText())){
-            textIsDisplayedAndEnabled("Embroidered Apron",newProducts_if.embroideredApronName);
+            textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronName);
+           // System.out.println(newProducts_if.unisexSpongeFleeceName.getText());
         }
         else if(value.equals(newProducts_if.unisexSpongeFleeceName.getText())){
-            textIsDisplayedAndEnabled("Unisex Sponge Fleece Drop Shoulder Sweatshirt | 3945 Bella Canvas", newProducts_if.unisexSpongeFleeceName);
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexSpongeFleeceName);
+            //System.out.println(newProducts_if.babyJerseyName.getText());
         }
         else if(value.equals(newProducts_if.babyJerseyName.getText())){
-            textIsDisplayedAndEnabled("Baby Jersey Short Sleeve One Piece | 100B Bella Canvas",newProducts_if.babyJerseyName);
+            textIsDisplayedAndEnabled(value,newProducts_if.babyJerseyName);
         }
         else if(value.equals(newProducts_if.unisexVNeckTeeName.getText())){
-            textIsDisplayedAndEnabled("Unisex V-Neck Tee | Bella + Canvas 3005",newProducts_if.unisexVNeckTeeName);
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexVNeckTeeName);
         }
         else logger.warn("Error");
     }
@@ -62,17 +65,34 @@ public class NewProductsSteps_if extends Base {
 
     @Then("Verifies that {string} is present")
     public void verifiesThatIsPresent(String value) {
+        if(value.equals(newProducts_if.embroideredApronPrice.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronPrice);
+        }
+        else if(value.equals(newProducts_if.unisexSpongeFleecePrice.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexSpongeFleecePrice);
+        }
+        else if(value.equals(newProducts_if.babyJerseyPrice.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.babyJerseyPrice);
+        }
+        else if(value.equals(newProducts_if.unisexVNeckTeePrice.getText())){
+            textIsDisplayedAndEnabled(value,newProducts_if.unisexVNeckTeePrice);
+        }
+        else logger.warn("Error");
     }
 
     @Then("Verifies that {string} Stars is present")
     public void verifiesThatStarsIsPresent(String value) {
     }
 
-    @Then("Clicks on More Products button")
+    @And("Clicks on More Products button")
     public void clicksOnMoreProductsButton() {
         newProducts_if.moreProductsButton.click();
         logger.info("Clicks on More Products Button");
+        newProducts_if.productCatalog.isDisplayed();
+        logger.info("Product Catalog is present");
     }
+
+
 }
 
 
