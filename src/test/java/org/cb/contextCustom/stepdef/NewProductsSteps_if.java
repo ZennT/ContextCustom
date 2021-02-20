@@ -98,6 +98,48 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
+    @Then("Moves to Embroidered Apron")
+    public void movesToEmbroideredApron() {
+        moveToElement(newProducts_if.apron);
+        logger.info("Moves to Embroidered Apron");
+        waitSomeTime(1000L);
+    }
+
+    @And("Verifies that Design & Buy button is present")
+    public void verifiesThatDesignBuyButtonIsPresent() {
+        newProducts_if.embroideredApronDesignButton.isEnabled();
+    }
+
+    @Then("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt")
+    public void movesToUnisexSpongeFleeceDropShoulderSweatshirt() {
+        moveToElement((newProducts_if.sweatshirt));
+        waitSomeTime(1000L);
+    }
+    @And("Verifies that Sweatshirt Design & Buy button is present")
+    public void verifiesThatSweatshirtDesignBuyButtonIsPresent() {
+        newProducts_if.unisexSpongeFleeceDesignButton.isEnabled();
+    }
+
+    @Then("Moves to Baby Jersey Short Sleeve One Piece")
+    public void movesToBabyJerseyShortSleeveOnePiece() {
+        moveToElement(newProducts_if.babyJersey);
+        waitSomeTime(1000L);
+    }
+    @And("Verifies that Baby Jersey Design & Buy button is present")
+    public void verifiesThatBabyJerseyDesignBuyButtonIsPresent() {
+        newProducts_if.babyJerseyDesignButton.isEnabled();
+    }
+
+    @Then("Moves to Unisex V-Neck Tee")
+    public void movesToUnisexVNeckTee() {
+        moveToElement(newProducts_if.vNeckTee);
+        waitSomeTime(1000L);
+    }
+
+    @And("Verifies that V Neck Tee Design & Buy button is present")
+    public void verifiesThatVNeckTeeDesignBuyButtonIsPresent() {
+        newProducts_if.unisexVNeckTeeDesignButton.isEnabled();
+    }
 
     @And("Clicks on More Products button")
     public void clicksOnMoreProductsButton() {
@@ -108,20 +150,7 @@ public class NewProductsSteps_if extends Base {
     }
 
 
-//    @Then("Verifies that {string} button is present")
-//    public void verifiesThatButtonIsPresent(String value) {
-//        if(value.equals(newProducts_if.embroideredApronDesignButton.getText())){
-//            verifyTheText("Design & Buy","Design & Buy");
-//            System.out.println("bbbb");
-//        }
-//    }
-//
-//
-//    @Then("Moves to {string}")
-//    public void movesTo(String value) {
-//        moveToElement(newProducts_if.embroideredApronDesignButton);
-//
-//    }
+
 }
 
 
