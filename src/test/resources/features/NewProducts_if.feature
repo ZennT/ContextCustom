@@ -29,17 +29,19 @@ Feature: Verifying new products
     Then Verifies that "Bella canvas" brand name is present
 
 
+    #Then Moves to "Embroidered Apron"
+    #And  Verifies that "Design & Buy" button is present
+    #Then Moves to "Unisex Sponge Fleece Drop Shoulder Sweatshirt | 3945 Bella Canvas"
+    #And  Verifies that "Design & Buy" button is present
+    #Then Moves to "Baby Jersey Short Sleeve One Piece | 100B Bella Canvas"
+    #And  Verifies that "Design & Buy" button is present
+    #Then Moves to "Unisex V-Neck Tee | Bella + Canvas 3005"
+    #And  Verifies that "Design & Buy" button is present
+
+
     And Clicks on More Products button
 
 
-    #Then Moves on "Embroidered Apron"
-    #And  Verifies and clicks on Design and Buy button
-    #Then Moves on "Unisex Sponge Fleece Drop Shoulder Sweatshirt | 3945 Bella Canvas"
-    #And  Clicks on Design and Buy
-    #Then Moves on "Baby Jersey Short Sleeve One Piece | 100B Bella Canvas"
-    #And  Clicks on Design and Buy
-    #Then Moves on "Unisex V-Neck Tee | Bella + Canvas 3005"
-    #And  Clicks on Design and Buy
 
 
 

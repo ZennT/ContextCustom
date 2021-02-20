@@ -67,6 +67,17 @@ public class NewProducts_if  {
     @FindBy(xpath="//li[@class='breadcrumb-item text-nowrap active']//a[normalize-space()='Product Catalog']")
     public WebElement productCatalog;
 
+//    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[1]")
+//    public WebElement embroideredApronDesignButton;
+//
+//    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[2]")
+//    public WebElement unisexSpongeFleeceDesignButton;
+//
+//    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[3]")
+//    public WebElement babyJerseyDesignButton;
+//
+//    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[4]")
+//    public WebElement unisexVNeckTeeDesignButton;
 
 
 

@@ -29,6 +29,7 @@ public class NewProductsSteps_if extends Base {
         if(value.equals(newProducts_if.embroideredApronImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.embroideredApronImage);
         }
+
         else if(value.equals(newProducts_if.unisexSpongeFleeceImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceImage);
         }
@@ -97,6 +98,7 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
+
     @And("Clicks on More Products button")
     public void clicksOnMoreProductsButton() {
         newProducts_if.moreProductsButton.click();
@@ -105,6 +107,21 @@ public class NewProductsSteps_if extends Base {
         logger.info("Product Catalog is present");
     }
 
+
+//    @Then("Verifies that {string} button is present")
+//    public void verifiesThatButtonIsPresent(String value) {
+//        if(value.equals(newProducts_if.embroideredApronDesignButton.getText())){
+//            verifyTheText("Design & Buy","Design & Buy");
+//            System.out.println("bbbb");
+//        }
+//    }
+//
+//
+//    @Then("Moves to {string}")
+//    public void movesTo(String value) {
+//        moveToElement(newProducts_if.embroideredApronDesignButton);
+//
+//    }
 }
 
 
