@@ -91,7 +91,4 @@ public class NewProducts_if  {
     public WebElement productCatalog;
 
 
-
-
-
 }
