@@ -38,4 +38,18 @@ public class NewProducts_if  {
     public WebElement unisexVNeckTeeName;
 
 
+
+
+    @FindBy(xpath = "//a[normalize-space()='More products']")
+    public WebElement moreProductsButton;
+
+
+
+
+
+
+
+
+
+
 }

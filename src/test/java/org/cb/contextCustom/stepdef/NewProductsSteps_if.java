@@ -60,6 +60,19 @@ public class NewProductsSteps_if extends Base {
     }
 
 
+    @Then("Verifies that {string} is present")
+    public void verifiesThatIsPresent(String value) {
+    }
+
+    @Then("Verifies that {string} Stars is present")
+    public void verifiesThatStarsIsPresent(String value) {
+    }
+
+    @Then("Clicks on More Products button")
+    public void clicksOnMoreProductsButton() {
+        newProducts_if.moreProductsButton.click();
+        logger.info("Clicks on More Products Button");
+    }
 }
 
 
