@@ -80,7 +80,7 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
-    @Then("Verifies that {string} brand is present")
+    @Then("Verifies that {string} brand name is present")
     public void verifiesThatBrandIsPresent(String value) {
         if(value.equals(newProducts_if.embroideredApronBrand.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronBrand);
