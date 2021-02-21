@@ -19,15 +19,25 @@ public class MainPageSteps extends Base{
         String expected = "Context Custom";
         String actual = MyDriver.get().getTitle();
         Assert.assertEquals(expected, actual);
-
         logger.info("contextcustom.com website title is {}", actual);
-    }
 
+    }
     @Then("Verify that Context Custom logo is present")
     public void verifyThatContextCustomLogoIsPresent() {
-        mainPage.logo.isDisplayed();
-        logger.info("ContextCustom logo is displayed.");
+        imageIsDisplayedAndEnabled(mainPage.logo);
     }
+
+    @Then("Verify that {string} is present")
+    public void verifyThatIsPresent(String value) {
+        if(value.equalsIgnoreCase(mainPage.howItWorks.getText())){
+            textIsDisplayedAndEnabled(value,mainPage.howItWorks);
+        }
+    }
+    @Then("Verify that Search icon is present")
+    public void verifyThatSearchIconIsPresent() {
+    }
+
+
 
 
 }

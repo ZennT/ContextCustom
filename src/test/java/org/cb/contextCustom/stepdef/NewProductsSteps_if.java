@@ -107,7 +107,7 @@ public class NewProductsSteps_if extends Base {
 
     @And("Verifies that Design & Buy button is present")
     public void verifiesThatDesignBuyButtonIsPresent() {
-        newProducts_if.embroideredApronDesignButton.isEnabled();
+        imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
     }
 
     @Then("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt")
@@ -117,7 +117,7 @@ public class NewProductsSteps_if extends Base {
     }
     @And("Verifies that Sweatshirt Design & Buy button is present")
     public void verifiesThatSweatshirtDesignBuyButtonIsPresent() {
-        newProducts_if.unisexSpongeFleeceDesignButton.isEnabled();
+        imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceDesignButton);
     }
 
     @Then("Moves to Baby Jersey Short Sleeve One Piece")
@@ -127,7 +127,7 @@ public class NewProductsSteps_if extends Base {
     }
     @And("Verifies that Baby Jersey Design & Buy button is present")
     public void verifiesThatBabyJerseyDesignBuyButtonIsPresent() {
-        newProducts_if.babyJerseyDesignButton.isEnabled();
+       imageIsDisplayedAndEnabled(newProducts_if.babyJerseyDesignButton);
     }
 
     @Then("Moves to Unisex V-Neck Tee")
@@ -138,7 +138,7 @@ public class NewProductsSteps_if extends Base {
 
     @And("Verifies that V Neck Tee Design & Buy button is present")
     public void verifiesThatVNeckTeeDesignBuyButtonIsPresent() {
-        newProducts_if.unisexVNeckTeeDesignButton.isEnabled();
+        imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeDesignButton);
     }
 
     @And("Clicks on More Products button")

@@ -28,7 +28,7 @@ public class Base {
     }
 
 
-    /*
+    /**
      *  this script must scroll, until link element is visible
      *  once link element visible, it will stop scrolling
      *  arguments[0] = means first webelement after comma (link)
@@ -58,7 +58,6 @@ public class Base {
 
     protected void verifyTheText(String expected, String actual) {
 //        Assert.assertEquals(expected, actual);
-//        Assert.assertEquals(expected.equalsIgnoreCase(actual)?  actual:expected1, actual );
         boolean verifyReturn;
         boolean verifyText = expected.equalsIgnoreCase(actual);
         if(verifyText){
@@ -73,6 +72,7 @@ public class Base {
     protected void textIsDisplayedAndEnabled(String expected, WebElement webElement) {
         String actual;
         actual = webElement.getText();
+//        System.out.println(actual);
         if(expected.equalsIgnoreCase(actual)){
             Assert.assertEquals(expected, actual);
             logger.info("{} is displayed.", expected);
@@ -84,6 +84,9 @@ public class Base {
             logger.info("This picture is displayed and enabled.");
         }
     }
-
+    protected void sendKeysValue(String value, WebElement webElement) {
+        webElement.clear();
+        webElement.sendKeys(value);
+    }
 
 }

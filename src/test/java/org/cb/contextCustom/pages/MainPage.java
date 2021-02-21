@@ -11,8 +11,14 @@ public class MainPage {
         PageFactory.initElements(MyDriver.get(), this);
     }
 
-    @FindBy(xpath = "//a[@class=\"navbar-brand d-none d-sm-block mr-4 order-lg-1\"]//img[1]")
+    @FindBy(xpath = "//a[@class='navbar-brand d-none d-sm-block mr-4 order-lg-1']//img[1]")
     public WebElement logo;
+
+    @FindBy(xpath = "//a[normalize-space()='How It Works?']")
+    public WebElement howItWorks;
+
+    @FindBy(xpath = "//i[@class='navbar-tool-icon czi-search']")
+    public WebElement searchIcon;
 
 
 
