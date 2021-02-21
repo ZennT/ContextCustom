@@ -80,10 +80,17 @@ public class Base {
     }
 
     protected void imageIsDisplayedAndEnabled(WebElement webElement) {
-        if (webElement.isDisplayed() && webElement.isEnabled()) {
+
+
+       if (webElement.isDisplayed() && webElement.isEnabled()) {
             logger.info("This picture is displayed and enabled.");
-        }
+       }
+
+
+
     }
+
+
     protected void sendKeysValue(String value, WebElement webElement) {
         webElement.clear();
         webElement.sendKeys(value);

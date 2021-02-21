@@ -29,7 +29,6 @@ public class NewProductsSteps_if extends Base {
         if(value.equals(newProducts_if.embroideredApronImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.embroideredApronImage);
         }
-
         else if(value.equals(newProducts_if.unisexSpongeFleeceImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceImage);
         }
@@ -39,7 +38,6 @@ public class NewProductsSteps_if extends Base {
         else if(value.equals(newProducts_if.unisexVNeckTeeImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeImage);
         }
-
         else logger.warn("Error");
     }
 
@@ -48,7 +46,7 @@ public class NewProductsSteps_if extends Base {
 
         if(value.equals(newProducts_if.embroideredApronName.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronName);
-           // System.out.println(newProducts_if.unisexSpongeFleeceName.getText());
+           // System.out.println(newProducts_if.unisexSpongeFleeceName.getText());   sonraki element gorunmuyordu, bu satirla kodda nasil yazdigini gorduk
         }
         else if(value.equals(newProducts_if.unisexSpongeFleeceName.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.unisexSpongeFleeceName);
@@ -102,20 +100,22 @@ public class NewProductsSteps_if extends Base {
     public void movesToEmbroideredApron() {
         moveToElement(newProducts_if.apron);
         logger.info("Moves to Embroidered Apron");
-        waitSomeTime(1000L);
+        waitSomeTime(5000L);
     }
 
-    @And("Verifies that Design & Buy button is present")
+    @Then("Verifies that Design & Buy button is present")
     public void verifiesThatDesignBuyButtonIsPresent() {
         imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
+        //newProducts_if.embroideredApronDesignButton.click();
     }
 
     @Then("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt")
     public void movesToUnisexSpongeFleeceDropShoulderSweatshirt() {
         moveToElement((newProducts_if.sweatshirt));
-        waitSomeTime(1000L);
+        logger.info("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt");
+        waitSomeTime(5000L);
     }
-    @And("Verifies that Sweatshirt Design & Buy button is present")
+    @Then("Verifies that Sweatshirt Design & Buy button is present")
     public void verifiesThatSweatshirtDesignBuyButtonIsPresent() {
         imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceDesignButton);
     }
@@ -123,9 +123,10 @@ public class NewProductsSteps_if extends Base {
     @Then("Moves to Baby Jersey Short Sleeve One Piece")
     public void movesToBabyJerseyShortSleeveOnePiece() {
         moveToElement(newProducts_if.babyJersey);
-        waitSomeTime(1000L);
+        logger.info("Moves to Baby Jersey Short Sleeve One Piece");
+        waitSomeTime(3000L);
     }
-    @And("Verifies that Baby Jersey Design & Buy button is present")
+    @Then("Verifies that Baby Jersey Design & Buy button is present")
     public void verifiesThatBabyJerseyDesignBuyButtonIsPresent() {
        imageIsDisplayedAndEnabled(newProducts_if.babyJerseyDesignButton);
     }
@@ -133,10 +134,11 @@ public class NewProductsSteps_if extends Base {
     @Then("Moves to Unisex V-Neck Tee")
     public void movesToUnisexVNeckTee() {
         moveToElement(newProducts_if.vNeckTee);
-        waitSomeTime(1000L);
+        logger.info("Moves to Unisex V-Neck Tee");
+        waitSomeTime(3000L);
     }
 
-    @And("Verifies that V Neck Tee Design & Buy button is present")
+    @Then("Verifies that V Neck Tee Design & Buy button is present")
     public void verifiesThatVNeckTeeDesignBuyButtonIsPresent() {
         imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeDesignButton);
     }

@@ -17,9 +17,19 @@ public class MainPage {
     @FindBy(xpath = "//a[normalize-space()='How It Works?']")
     public WebElement howItWorks;
 
+    @FindBy(xpath ="//a[normalize-space()='Free Mockups']" )
+    public WebElement freeMockups;
+
+    @FindBy(xpath = "//a[normalize-space()='Buy Designs']")
+    public WebElement buyDesigns;
+
+    @FindBy(xpath = "//div[@class='navbar-tool-text ml-n3']")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "//a[@class='navbar-tool-text']")
+    public WebElement myCart;
+
     @FindBy(xpath = "//i[@class='navbar-tool-icon czi-search']")
     public WebElement searchIcon;
-
-
 
 }

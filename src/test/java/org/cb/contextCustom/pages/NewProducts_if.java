@@ -64,25 +64,25 @@ public class NewProducts_if  {
     @FindBy(xpath = "//img[@alt='Embroidered Apron']")
     public WebElement apron;
 
-    @FindBy(xpath = "//div[@class='row pt-4 mx-n2']//div[1]//div[1]//div[2]//input[1]")
+    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2']//parent::div)[4]")
     public WebElement embroideredApronDesignButton;
 
     @FindBy(xpath = "//img[contains(@alt,'3945 Bella Canvas')]")
     public WebElement sweatshirt;
 
-    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[2]")
+    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2']//parent::div)[1]")
     public WebElement unisexSpongeFleeceDesignButton;
 
     @FindBy(xpath = "//img[contains(@alt,'100B Bella Canvas')]")
     public WebElement babyJersey;
 
-    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[3]")
+    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2']//parent::div)[2]")
     public WebElement babyJerseyDesignButton;
 
     @FindBy(xpath = "//img[@alt='Unisex V-Neck Tee | Bella + Canvas 3005']")
     public WebElement vNeckTee;
 
-    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2'])[4]")
+    @FindBy(xpath = "(//input[@class='btn btn-primary btn-sm btn-block mb-2']//parent::div)[3]")
     public WebElement unisexVNeckTeeDesignButton;
 
     @FindBy(xpath = "//a[normalize-space()='More products']")
