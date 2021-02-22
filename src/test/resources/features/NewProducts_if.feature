@@ -23,14 +23,15 @@ Feature: Verifying new products
     Then Verifies that "Bella canvas" brand name is present
     Then Verifies that "Bella canvas" brand name is present
 
-    Then Moves to Embroidered Apron
-    Then  Verifies that Design & Buy button is present
+
     Then Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt
-    Then  Verifies that Sweatshirt Design & Buy button is present
+    Then Verifies that Sweatshirt Design & Buy button is present
     Then Moves to Baby Jersey Short Sleeve One Piece
-    Then  Verifies that Baby Jersey Design & Buy button is present
+    Then Verifies that Baby Jersey Design & Buy button is present
     Then Moves to Unisex V-Neck Tee
-    Then  Verifies that V Neck Tee Design & Buy button is present
+    Then Verifies that V Neck Tee Design & Buy button is present
+    Then Moves to Embroidered Apron
+    Then Verifies that Apron Design & Buy button is present
 
     And Clicks on More Products button
 

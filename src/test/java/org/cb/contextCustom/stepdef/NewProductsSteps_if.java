@@ -96,19 +96,6 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
-    @Then("Moves to Embroidered Apron")
-    public void movesToEmbroideredApron() {
-        moveToElement(newProducts_if.apron);
-        logger.info("Moves to Embroidered Apron");
-        waitSomeTime(5000L);
-    }
-
-    @Then("Verifies that Design & Buy button is present")
-    public void verifiesThatDesignBuyButtonIsPresent() {
-        imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
-        //newProducts_if.embroideredApronDesignButton.click();
-    }
-
     @Then("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt")
     public void movesToUnisexSpongeFleeceDropShoulderSweatshirt() {
         moveToElement((newProducts_if.sweatshirt));
@@ -141,6 +128,19 @@ public class NewProductsSteps_if extends Base {
     @Then("Verifies that V Neck Tee Design & Buy button is present")
     public void verifiesThatVNeckTeeDesignBuyButtonIsPresent() {
         imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeDesignButton);
+    }
+
+    @Then("Moves to Embroidered Apron")
+    public void movesToEmbroideredApron() {
+        moveToElement(newProducts_if.apron);
+        logger.info("Moves to Embroidered Apron");
+        waitSomeTime(5000L);
+    }
+
+    @Then("Verifies that Apron Design & Buy button is present")
+    public void verifiesThatApronDesignBuyButtonIsPresent() {
+        imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
+        //newProducts_if.embroideredApronDesignButton.click();
     }
 
     @And("Clicks on More Products button")
