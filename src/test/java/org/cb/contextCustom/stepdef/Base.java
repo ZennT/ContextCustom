@@ -85,6 +85,9 @@ public class Base {
        if (webElement.isDisplayed() && webElement.isEnabled()) {
             logger.info("This picture is displayed and enabled.");
        }
+       else {
+           logger.warn("Error!! this image is not displayed");
+       }
 
 
 
@@ -95,5 +98,7 @@ public class Base {
         webElement.clear();
         webElement.sendKeys(value);
     }
+
+
 
 }
