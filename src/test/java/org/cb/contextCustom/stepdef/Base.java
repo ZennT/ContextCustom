@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.Assert.assertTrue;
-
 public class Base {
 
     public Base() {
@@ -80,23 +78,14 @@ public class Base {
     }
 
     protected void imageIsDisplayedAndEnabled(WebElement webElement) {
-
         if (webElement.isDisplayed() && webElement.isEnabled()) {
             logger.info("This picture is displayed and enabled.");
         }
-        else {
-//           Assert.fail("Error!! this image is not displayed");
-           logger.error("Error!! this image is not displayed");
-        }
-
     }
-
-
     protected void sendKeysValue(String value, WebElement webElement) {
         webElement.clear();
         webElement.sendKeys(value);
     }
-
 
 
 }
