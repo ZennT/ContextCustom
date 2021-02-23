@@ -81,15 +81,13 @@ public class Base {
 
     protected void imageIsDisplayedAndEnabled(WebElement webElement) {
 
-
-       if (webElement.isDisplayed() && webElement.isEnabled()) {
+        if (webElement.isDisplayed() && webElement.isEnabled()) {
             logger.info("This picture is displayed and enabled.");
-       }
-       else {
-           logger.warn("Error!! this image is not displayed");
-       }
-
-
+        }
+        else {
+//           Assert.fail("Error!! this image is not displayed");
+           logger.error("Error!! this image is not displayed");
+        }
 
     }
 

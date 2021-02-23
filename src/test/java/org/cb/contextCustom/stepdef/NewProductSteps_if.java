@@ -7,7 +7,7 @@ import org.cb.contextCustom.pages.NewProducts_if;
 import org.cb.contextCustom.utils.ConfigurationReader;
 import org.cb.contextCustom.utils.MyDriver;
 
-public class NewProductsSteps_if extends Base {
+public class NewProductSteps_if extends Base{
 
     NewProducts_if newProducts_if = new NewProducts_if();
 
@@ -17,10 +17,9 @@ public class NewProductsSteps_if extends Base {
         logger.info("User is on LandingPage");
     }
 
+
     @Then("Verifies that {string} is displayed")
     public void verifiesThatIsDisplayed(String value) {
-
-
         if(value.equals(newProducts_if.embroideredApronImage.getAttribute("alt"))){
             imageIsDisplayedAndEnabled(newProducts_if.embroideredApronImage);
         }
@@ -36,12 +35,12 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
+
     @Then("Verifies that {string} item name is present")
     public void verifiesThatItemNameIsPresent(String value) {
-
         if(value.equals(newProducts_if.embroideredApronName.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronName);
-           // System.out.println(newProducts_if.unisexSpongeFleeceName.getText());   sonraki element gorunmuyordu, bu satirla kodda nasil yazdigini gorduk
+            // System.out.println(newProducts_if.unisexSpongeFleeceName.getText());   sonraki element gorunmuyordu, bu satirla kodda nasil yazdigini gorduk
         }
         else if(value.equals(newProducts_if.unisexSpongeFleeceName.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.unisexSpongeFleeceName);
@@ -75,7 +74,7 @@ public class NewProductsSteps_if extends Base {
     }
 
     @Then("Verifies that {string} brand name is present")
-    public void verifiesThatBrandIsPresent(String value) {
+    public void verifiesThatBrandNameIsPresent(String value) {
         if(value.equals(newProducts_if.embroideredApronBrand.getText())){
             textIsDisplayedAndEnabled(value,newProducts_if.embroideredApronBrand);
         }
@@ -91,28 +90,18 @@ public class NewProductsSteps_if extends Base {
         else logger.warn("Error");
     }
 
-    @Then("Moves to Embroidered Apron")
-    public void movesToEmbroideredApron() {
-        moveToElement(newProducts_if.apron);
-        logger.info("Moves to Embroidered Apron");
-        waitSomeTime(5000L);
-    }
-
-    @Then("Verifies that Design & Buy button is present")
-    public void verifiesThatDesignBuyButtonIsPresent() {
-        imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
-        //newProducts_if.embroideredApronDesignButton.click();
-    }
-
     @Then("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt")
     public void movesToUnisexSpongeFleeceDropShoulderSweatshirt() {
         moveToElement((newProducts_if.sweatshirt));
         logger.info("Moves to Unisex Sponge Fleece Drop Shoulder Sweatshirt");
         waitSomeTime(5000L);
+
     }
+
     @Then("Verifies that Sweatshirt Design & Buy button is present")
     public void verifiesThatSweatshirtDesignBuyButtonIsPresent() {
         imageIsDisplayedAndEnabled(newProducts_if.unisexSpongeFleeceDesignButton);
+
     }
 
     @Then("Moves to Baby Jersey Short Sleeve One Piece")
@@ -120,10 +109,12 @@ public class NewProductsSteps_if extends Base {
         moveToElement(newProducts_if.babyJersey);
         logger.info("Moves to Baby Jersey Short Sleeve One Piece");
         waitSomeTime(3000L);
+
     }
+
     @Then("Verifies that Baby Jersey Design & Buy button is present")
     public void verifiesThatBabyJerseyDesignBuyButtonIsPresent() {
-       imageIsDisplayedAndEnabled(newProducts_if.babyJerseyDesignButton);
+        imageIsDisplayedAndEnabled(newProducts_if.babyJerseyDesignButton);
     }
 
     @Then("Moves to Unisex V-Neck Tee")
@@ -138,6 +129,18 @@ public class NewProductsSteps_if extends Base {
         imageIsDisplayedAndEnabled(newProducts_if.unisexVNeckTeeDesignButton);
     }
 
+    @Then("Moves to Embroidered Apron")
+    public void movesToEmbroideredApron() {
+        moveToElement(newProducts_if.apron);
+        logger.info("Moves to Embroidered Apron");
+        waitSomeTime(5000L);
+    }
+
+    @Then("Verifies that Apron Design & Buy button is present")
+    public void verifiesThatApronDesignBuyButtonIsPresent() {
+        imageIsDisplayedAndEnabled(newProducts_if.embroideredApronDesignButton);
+    }
+
     @And("Clicks on More Products button")
     public void clicksOnMoreProductsButton() {
         newProducts_if.moreProductsButton.click();
@@ -145,9 +148,4 @@ public class NewProductsSteps_if extends Base {
         newProducts_if.productCatalog.isDisplayed();
         logger.info("Product Catalog is present");
     }
-
-
-
 }
-
-
