@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MainPage {
+public class MainPageOne {
 
-    public MainPage() {
+    public MainPageOne() {
         PageFactory.initElements(MyDriver.get(), this);
     }
 
@@ -23,13 +23,13 @@ public class MainPage {
     @FindBy(xpath = "//a[normalize-space()='Buy Designs']")
     public WebElement buyDesigns;
 
-    @FindBy(xpath = "//div[@class='navbar-tool-text ml-n3']")
-    public WebElement myAccount;
-
-    @FindBy(xpath = "//a[@class='navbar-tool-text']")
-    public WebElement myCart;
-
-    @FindBy(xpath = "//i[@class='navbar-tool-icon czi-search']")
-    public WebElement searchIcon;
+//    @FindBy(xpath = "//div[@class='navbar-tool-text ml-n3']")
+//    public WebElement myAccount;
+//
+//    @FindBy(xpath = "//a[@class='navbar-tool-text']")
+//    public WebElement myCart;
+//
+//    @FindBy(xpath = "//i[@class='navbar-tool-icon czi-search']")
+//    public WebElement searchIcon;
 
 }
